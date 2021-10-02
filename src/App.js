@@ -30,6 +30,15 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(false);
 
+  // Turning the word into an array of objects with the letter and the isFound info
+  useEffect(() => {
+    let secret = Array.from(word).map((letter) => ({
+      char: letter,
+      isFound: false,
+    }));
+    setSecretWord(secret);
+  }, [word]);
+
   useEffect(() => {
     for (let i = 0; i < secretWord.length; i++) {
       if (secretWord[i].isFound === false) {
@@ -85,15 +94,6 @@ function App() {
     setEnteredLetter('');
   };
 
-  // Turning the word into an array of objects with the letter and the isFound info
-  useEffect(() => {
-    let secret = Array.from(word).map((letter) => ({
-      char: letter,
-      isFound: false,
-    }));
-    setSecretWord(secret);
-  }, [word]);
-
   const checkWord = () => {
     if (word.includes(enteredLetter)) {
       const updatedSecretWord = secretWord.map((letter) => {
@@ -128,16 +128,13 @@ function App() {
       <Header />
       <SecretWord secretWord={secretWord} />
       <div className='gameContainer'>
-        <GameInfo
-          guessesLeft={guessesLeft}
-          lettersGuessed={lettersGuessed}
-        />
+        <GameInfo guessesLeft={guessesLeft} lettersGuessed={lettersGuessed} />
         <div className='gameControl'>
           <Figure guessesLeft={guessesLeft} />
         </div>
       </div>
 
-      {(!completed && guessesLeft > 0) && (
+      {!completed && guessesLeft > 0 && (
         <Form
           enteredLetter={enteredLetter}
           setEnteredLetter={setEnteredLetter}
