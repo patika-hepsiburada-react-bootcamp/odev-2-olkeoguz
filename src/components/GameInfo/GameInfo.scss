@@ -1,0 +1,18 @@
+.gameInfo {
+  border: 1px solid white;
+  border-radius:4px;
+  padding: 1rem;
+
+  strong{
+    color:red;
+  }
+
+  .wrong{
+    color:red;
+  }
+
+  .correct{
+    color:green;
+  }
+}
+  

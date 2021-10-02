@@ -1,0 +1,18 @@
+.hintContainer{
+    position:fixed;
+    top:12%;
+    left:1%;
+    display: flex;
+    align-items:center;
+    gap:10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        font-size:18px;
+    }
+
+    span{
+        color:yellow;
+    }
+}

@@ -1,0 +1,28 @@
+body {
+  background-color: #002244;
+  color: white;
+  padding:0.5rem;
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+
+    .gameContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+
+      .gameControl {
+        display: flex;
+        flex-direction: column;
+        // justify-content:center;
+
+        align-items: center;
+      }
+    }
+  }
+}
+
