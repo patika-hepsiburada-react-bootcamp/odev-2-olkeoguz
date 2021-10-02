@@ -18,3 +18,5 @@ npm install
 ```
 to install all the dependencies
 
+<a href="https://distracted-jang-28c02a.netlify.app/" target="_blank">Live Demo</a>
+
