@@ -24,7 +24,7 @@ function App() {
 
   const [lettersGuessed, setLettersGuessed] = useState(INITIALGUESSEDLETTERS);
 
-  const [secretWord, setSecretWord] = useState([]);
+  const [secretWord, setSecretWord] = useState([]); // Word turned into ----
   const [guessesLeft, setGuessesLeft] = useState(5);
   const [completed, setCompleted] = useState(false);
 
